@@ -25,3 +25,59 @@ body{background:radial-gradient(circle at 80% 8%,rgba(217,168,78,.11),transparen
 header{position:sticky;top:0;z-index:30}.site-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(1160px,92%);margin:auto;height:76px}.site-nav nav{display:flex;gap:22px}.site-nav nav a{color:#aaa;font-size:13px}.site-nav nav a:hover,.site-nav nav a.active{color:#fff}.nav-brand{font-weight:900;letter-spacing:-.08em;font-size:21px}.nav-brand span{color:var(--gold)}.nav-menu{display:none;background:none;border:0;color:#fff;font-size:24px}.page{width:min(1160px,92%);margin:auto}.page-hero{padding:95px 0 55px}.page-hero .eyebrow{color:var(--gold);font-size:11px;letter-spacing:.22em;font-weight:800}.page-hero h1{font-size:clamp(48px,7vw,82px);line-height:.94;letter-spacing:-.07em;max-width:900px;margin:16px 0}.page-hero p{max-width:700px;color:var(--muted);font-size:17px}.section{padding:70px 0}.section h2{font-size:40px;letter-spacing:-.05em;margin:8px 0}.kicker{color:var(--gold);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}.card{background:linear-gradient(145deg,#111,#0b0b0b);border:1px solid var(--line);border-radius:20px;padding:26px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat strong{display:block;font-size:29px;margin:6px 0}.stat small,.muted{color:var(--muted)}.pill{display:inline-block;padding:7px 10px;border:1px solid var(--line);border-radius:99px;color:#bbb;font-size:11px}.plt{color:var(--plt2)}.gold{color:var(--gold)}.cta{background:var(--plt);color:#fff;border-color:var(--plt)}.cta:hover{box-shadow:0 0 30px rgba(255,90,47,.2)}.timeline2{display:grid;gap:14px}.phase2{display:grid;grid-template-columns:60px 1fr;gap:16px}.phase-num{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:#161616;border:1px solid rgba(217,168,78,.35);color:var(--gold);font-weight:800}.phase2 h3{margin:0}.phase2 p{color:var(--muted);margin:7px 0 0}.faq{display:grid;gap:10px;max-width:900px}.faq details{border:1px solid var(--line);background:#111;border-radius:16px;padding:18px 20px}.faq summary{cursor:pointer;font-weight:700}.faq p{color:var(--muted);margin:12px 0 0}.terms{max-width:900px}.terms h3{margin:0 0 9px}.terms p,.terms li{color:var(--muted)}.terms ul{padding-left:20px}.footer{border-top:1px solid var(--line);padding:42px 0;color:#777;font-size:12px}.footer-in{width:min(1160px,92%);margin:auto;display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer a{color:#999;margin-right:18px}.mobile-open nav{display:flex!important}
 @media(max-width:800px){.site-nav nav{display:none;position:absolute;left:4%;right:4%;top:68px;background:#101010;border:1px solid var(--line);border-radius:16px;padding:12px;flex-direction:column}.nav-menu{display:block}.grid4,.grid2{grid-template-columns:1fr 1fr}.page-hero{padding-top:70px}}
 @media(max-width:520px){.grid4,.grid2{grid-template-columns:1fr}.page-hero h1{font-size:53px}}
+
+/* Mobile navigation fix */
+@media (max-width: 800px) {
+  header .site-nav {
+    position: relative;
+  }
+
+  header .site-nav nav {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 68px;
+    background: #101010;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 2px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.45);
+  }
+
+  header.mobile-open .site-nav nav {
+    display: flex !important;
+  }
+
+  header .site-nav nav a {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 10px;
+  }
+
+  header .site-nav nav a:hover,
+  header .site-nav nav a.active {
+    background: #181818;
+  }
+
+  .nav-menu {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+
+  .nav-menu:active,
+  .nav-menu:focus-visible {
+    border-color: var(--line);
+    outline: none;
+  }
+}
