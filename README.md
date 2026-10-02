@@ -1,13 +1,15 @@
-# Practice Launch Token ($PLT) — V2
+# Omnexia & $PLT V3
 
-Minimal dark/gold responsive landing page with:
-- animated 3D-style PLT coin
-- floating particles
-- scrolling ticker
-- animated tokenomics visualization
-- presale progress UI
-- roadmap and vesting sections
-- mobile responsive layout
-- reduced-motion support
+Multi-page static website for Omnexia and Practice Launch Token ($PLT).
 
-This is a static front-end. Wallet connection and live presale data are not connected yet.
+Pages: Home, Tokenomics, Roadmap, FAQ, Terms & Risk Disclosure.
+
+## Cloudflare Pages
+Framework: None
+Build command: blank
+Build output directory: `.`
+
+Upload the contents of this folder to the root of the GitHub repository.
+
+The presale CTA is intentionally a placeholder until the official live presale URL is supplied.
+The Terms page is project-language disclosure and should receive jurisdiction-specific legal review before publication.
