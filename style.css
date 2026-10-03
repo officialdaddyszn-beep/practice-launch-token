@@ -55,3 +55,35 @@ header{position:sticky;top:0;z-index:30}.site-nav{display:flex;align-items:cente
 .page.page-hero h1 { font-size:clamp(39px,5.3vw,66px); max-width:850px; }
 .page.section > h2 { font-size:34px; }
 @media(max-width:800px){ .social-bar { align-items:flex-start; flex-direction:column; } .social-links { justify-content:flex-start; } .page.page-hero h1 { font-size:clamp(38px,10vw,54px); } }
+
+/* Latest homepage social buttons */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.social-bar{display:flex;align-items:center;justify-content:flex-end;padding-top:12px;padding-bottom:12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.social-links-brand{display:flex;gap:10px;align-items:center}
+.social-links-brand a{width:48px;height:48px;padding:0;border:0;border-radius:13px;display:inline-flex;align-items:center;justify-content:center;color:#fff;transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
+.social-links-brand a:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.social-links-brand svg{width:22px;height:22px;display:block;fill:#fff}
+.social-x{background:#000;box-shadow:0 8px 22px rgba(255,255,255,.05)}
+.social-telegram{background:#229ED9;box-shadow:0 8px 22px rgba(34,158,217,.22)}
+.social-youtube{background:#FF0000;box-shadow:0 8px 22px rgba(255,0,0,.2)}
+
+/* Reference tokenomics presentation */
+.tokenomics-visual{display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tokenomics-reference{display:block;width:100%;max-width:650px;height:auto;border-radius:14px;background:#fff}
+.tokenomics-chart-wrap{width:100%}
+.tokenomics-donut{width:240px;height:240px;border-radius:50%;background:conic-gradient(#f76889 0 60%,#1498df 60% 79%,#ef61c9 79% 85.79%,#f06b94 85.79% 89.39%,#ff9c72 89.39% 91.65%,#ffcc57 91.65% 99.95%,transparent 99.95% 100%);display:grid;place-items:center;margin:0 auto 25px;position:relative}
+.tokenomics-donut:after{content:"";position:absolute;inset:62px;border-radius:50%;background:#090b0e}
+.tokenomics-donut span{position:relative;z-index:1;color:#f76889;font-size:23px;font-weight:800}
+.tokenomics-legend{display:grid;gap:10px;max-width:380px;margin:auto}
+.tokenomics-legend div{display:grid;grid-template-columns:13px 1fr auto;gap:9px;align-items:center;color:#c7cbd1;font-size:13px}
+.tokenomics-legend i{width:11px;height:11px;border-radius:3px;display:block}
+.legend-presale{background:#f76889}.legend-liquidity{background:#1498df}.legend-airdrop{background:#ef61c9}.legend-marketing{background:#f06b94}.legend-contingency{background:#ff9c72}.legend-unlocked{background:#ffcc57}
+.tokenomics-legend b{color:#fff}
+.token-info{display:grid;gap:0;margin-top:18px}
+.token-info>div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line)}
+.token-info>div:last-child{border-bottom:0}
+.token-info span{color:var(--muted)}
+.token-info b{text-align:right;word-break:break-word}
+.contract-inline{font:11px ui-monospace,SFMono-Regular,monospace;max-width:360px}
+@media(max-width:800px){.social-bar{justify-content:center}.tokenomics-visual{padding:18px}.tokenomics-reference{max-width:100%}}
+@media(max-width:520px){.social-links-brand a{width:46px;height:46px}.tokenomics-donut{width:205px;height:205px}.tokenomics-donut:after{inset:53px}.token-info>div{align-items:flex-start;flex-direction:column;gap:5px}.token-info b{text-align:left}.contract-inline{max-width:100%}}
